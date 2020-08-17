@@ -1,0 +1,254 @@
+<div class="container">
+    <div class="row">
+        <div class="map-links col-md-12">
+            <ul>
+                <li data-class="map-info" class="selected"><a>Map</a></li>
+                <li data-class="Camera-info"><a>Camera</a></li>
+                <!-- <li data-class="change-pass"><a>Change Password</a></li> -->
+                <li data-class="Degree-and-Activites"><a>Degree and Activites</a></li>
+                <li data-class="Previous-Location"><a>Previous Location</a></li>
+                <li><button type="submit" (click)="logOut()"
+                  class="btn-btn-info">logout</button></li>
+                <div class="clear-fix"></div>
+            </ul>
+        </div>
+        <div class="map-info col-md-12">
+            <div class="row">
+       
+        <div class="col-md-9">
+<!-- start maps -->
+
+  <!-- <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
+        <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng"[label]="marker.label">
+        <agm-info-window></agm-info-window>
+        </agm-marker>
+      </agm-marker-cluster>
+      
+    <agm-polyline
+    [visible]="true"
+    [strokeWeight]="3">
+     <agm-polyline-point 
+       *ngFor="let marker of markers; let i=index"
+       [latitude]="marker.lat"
+       [longitude]="marker.lng">
+     </agm-polyline-point>
+   </agm-polyline>
+  </agm-map> -->
+
+  <app-google-map></app-google-map>
+
+<!-- end maps -->
+
+
+<!-- *ngIf="isStill()" -->
+        </div>
+        <div class="col-md-2 ml-1 mt-2">
+            <div id="del-countdown">
+                <div id="clock"></div>
+            
+            </div>
+        </div>
+    </div></div>
+    <div class="Camera-info col-md-12">
+      <app-camera></app-camera>
+    </div>
+    <div class="change-pass col-md-12">
+        <h5>Change Password</h5>
+              <div class="line"></div> 
+             <form [formGroup]='contactsForm'>
+                <div class="form-group col-md-12">
+                    <label>
+                        Current Password</label><br>
+                        <input type="password" formControlName='password' class="form-contol"
+                        [(ngModel)]="userpass.currentpass" required  name="currentpass">                   
+                    <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                    class="alert text-danger">UserEmail invalid</div>
+                  </div> -->
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label>New Password</label>
+                    <input type="password" formControlName='password' class="form-contol" required name="newpass">
+                    <div *ngIf="contactsForm.controls.password.touched && contactsForm.controls.password.errors != null"
+                    class="alert text-danger">Password Must Start captail Latter</div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Verify Password</label>
+                    <input type="password"  formControlName='conpassword' class="form-contol" [(ngModel)]="userpass.password" name="password"
+                    required>
+                    <div *ngIf="contactsForm.controls.conpassword.touched && contactsForm.controls.conpassword.value != contactsForm.controls.password.value"
+                    class="alert text-danger">Password don't Match</div>
+                </div>
+                <a><button type="submit" class="btn-btn-info" (click)="updateTutorial()">Submit</button></a>
+
+            </form>
+    </div>
+
+    <div class="Previous-Location">
+        <h5>Show PreviousLocation</h5>
+            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">latitude</th>
+              <th scope="col">longitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let use of preiousContainer; let i = index">
+              <a [routerLink]="['/previous',i+1]">
+              <td>{{use.latitude}}</td>
+              <td>{{use.longitude}}</td>
+            </a>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+
+
+    </div>
+    <!-- <div class="Degree-and-Activites">
+      <div class="degree-table">
+        <h5>Show Degree</h5>
+            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">mathDegree</th>
+              <th scope="col">aribacDegree</th>
+              <th scope="col">English</th>
+              <th scope="col">France</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{math}}</td>
+              <td>{{arabic}}</td>
+              <td>{{english}}</td>
+              <td>{{france}}</td>
+
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      <div class="activites mt-5">
+         <h5>Activites</h5>
+         <div class="line"></div>
+         <div class="row">
+           <div class="col-md-5">
+       <p class="text-muted mt-5 p-4">{{activity}}</p>
+       <p class="text-muted mt-5 p-4">student good in swimming and weak in football and very good in drawing and excellent in vollyball  its behaviour is good in class and with friends and Good academic level and participate in the research work is very good </p>
+
+           </div>
+           <div class="col-md-6">
+             <img src="assets/images/activity.jpg">
+           </div>
+          </div>
+      </div>
+
+
+
+
+
+    </div> -->
+    <div class="Degree-and-Activites">
+      <div class="Activite-link">
+      <ul>
+        <li data-class="inbox" class="selected"><a>inbox</a></li>
+        <li data-class="message"><a>Sent Message</a></li>
+      </ul>
+    </div>
+      <div class="inbox">
+        <div class="inbox1">
+          <div class="front inbox-first">
+            <div class="name">
+              <a><i class="fa fa-star-o a" aria-hidden="true"></i>
+              School Manager(Me)</a>
+              </div>
+              <div class="content">
+               <p>School Manager sent you report about your childern
+                ...</p>
+              </div>
+              <div class="time">
+               <p>09:00 am</p>
+              </div>
+              <div class="clear-fix"></div>
+          </div>
+          <div class="line"></div>
+          <div class="hidden-icon">
+            <ul class="icon1">
+              <li><a><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-trash" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-inbox" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                                </a></li>
+             </ul>
+          </div>
+         <div class="back">
+           <app-admin-message></app-admin-message>
+           </div>
+         </div>
+         <div class="inbox1">
+          <div class="front inbox-first">
+            <div class="name">
+              <a><i class="fa fa-star-o a" aria-hidden="true"></i>
+              School Manager(Me)</a>
+              </div>
+              <div class="content">
+               <p>School Manager sent you report about your childern
+                ...</p>
+              </div>
+              <div class="time">
+               <p>08:00 am</p>
+              </div>
+              <div class="clear-fix"></div>
+          </div>
+          <div class="line"></div>
+          <div class="hidden-icon">
+            <ul class="icon1">
+              <li><a><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-trash" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-inbox" aria-hidden="true"></i>
+                               </a></li>
+              <li><a><i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                                </a></li>
+             </ul>
+          </div>
+         <div class="back">
+           <app-activity></app-activity>
+           </div>
+         </div>
+         <div class="">
+
+         </div>
+
+      </div>
+      <div class="message">
+        <form #studentForm="ngForm" [formGroup]='contactsForm'>
+          <div class="row">
+              <div class="form-group group1 col-md-12">
+                  <input type="text" formControlName='userEmail' class="form-contol activity-input" required [(ngModel)]="message.message"
+                   name="activity" placeholder="Write Message">
+                   <!-- <textarea placeholder="Write Message"></textarea> -->
+                     
+              </div>
+              </div>
+              <a><button type="submit" (click)="saveMessage()"
+                class="btn-btn-info">Sent Message</button></a><br>     
+              </form>
+      </div>
+    </div>
+    </div>
+</div>
+
+<!-- <app-footer></app-footer> -->

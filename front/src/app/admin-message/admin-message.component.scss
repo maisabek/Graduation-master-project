@@ -1,0 +1,44 @@
+.back h5{
+    margin-top: 43px;
+    margin-bottom: 38px;
+    color:gray;
+}
+.back img{
+    border-radius: 50%;
+    margin-bottom: 57px
+}
+.back-end-p{
+    margin-bottom: 723px;
+}
+.back-image,.back-header{
+    float: left;
+}
+.icon1{margin-left:2%}
+.icon2{margin-right:2%}
+.icon1 li{float:left;list-style-type: none;}
+.icon2 li{float: right;list-style-type: none;}
+
+.icon1 li a,.icon2 li a{
+    color: #089bab;
+    background: #ceebee;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 0 3px;
+    padding: 6px;
+    cursor: pointer;
+}
+p,h5{margin-left: 5%;}
+h5{margin-left: 36%;
+    margin-top: 5%;
+}
+.line{
+    background-color: rgb(235, 233, 233);
+    height: 1px;
+    width: 100%;
+    margin-top: 74px;
+    margin-bottom: 20px;
+  }
+.reply{display: none}
+input{padding: 80px;}

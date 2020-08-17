@@ -1,0 +1,42 @@
+<div class="cont">
+    <!-- (ngSubmit)='saveform()' -->
+    <div class="heade">
+       <h5>LOGIN</h5>
+  <form [formGroup]='contactsForm' #myInput>
+     <div class="form-group group1">
+         <label><i class="fa fa-user" aria-hidden="true"></i>
+           </label>
+      <input  type="text" [(ngModel)]='userName' placeholder="Email" id="userInput" class="form-contol">
+   <!-- <p>{{email}}</p> -->
+   <!-- formControlName='userEmail' -->
+   <!-- formControlName='users' -->
+      <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null" class="alert text-danger">UserEmail invalid</div>
+     </div>
+ 
+  <div class="form-group group2">
+    <label><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
+     <input type="password" [(ngModel)]='password' placeholder="Password" class="form-contol">
+     <div *ngIf="contactsForm.controls.password.touched && contactsForm.controls.password.errors != null" class="alert text-danger">Password Must Start captail Latter</div>
+ 
+    </div>
+
+    <div class="form-group group2">
+        <label><i class="fa fa-users" aria-hidden="true"></i></label>
+        <select required class="form-contol"  [(ngModel)]='users'>
+            <option value="user">user</option>
+            <option value="school">school</option>
+            <option value="admin">admin</option>
+        </select>
+         <!-- <div *ngIf="contactsForm.controls.users.touched" class="alert text-danger">must choose user</div> -->
+        </div>
+    <button [disabled]='contactsForm.invalid' type="submit" class="btn-btn-info" (click)='registeredUser()'>send</button>
+  </form>
+  <a href="">forgot password ?</a>
+  <div class="social">
+      <ul>
+          <li><a href="#" class="facebook"><span class="fa fa-facebook"></span></a></li>
+          <li><a href="#" class="twitter"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="#" class="google"><span class="fa fa-google-plus"></span></a></li>
+      </ul>
+  </div></div>
+ </div>

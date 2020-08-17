@@ -1,0 +1,141 @@
+<div class="links">
+    <ul>
+        <li data-class="Personal-Information" class="selected"><a>Create New User</a></li>
+        <li data-class="Email-To-School" class="selected"><a>Create Email To School</a></li>
+        <li data-class="change-pass"><a>Show Users</a></li>
+        <li data-class="Email-and-SMS"><a>Show Requests</a></li>
+        <li><button type="submit" (click)="logOut()"
+          class="btn-btn-info">logout</button></li>
+        <div class="clear-fix"></div>
+    </ul>
+</div>
+<div class="Personal-Information">
+    <h5 class="ml-5">Create New User</h5>
+    <div class="line"></div>
+    <div class="container">
+        <div class="row">
+            <form #studentForm="ngForm" [formGroup]='contactsForm'>
+                <div class="row">
+
+                <div class="form-group group1 col-md-12">
+                        <label>user num:</label><br>
+                        <input type="text" placeholder="user number" formControlName='userEmail' class="form-contol" required [(ngModel)]="user.idd"
+                         name="idd">
+                            <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                            class="alert text-danger">UserEmail invalid</div> -->
+                    </div>
+
+                    <div class="form-group group1 col-md-12">
+                        <label>Email:</label><br>
+                        <input type="text" placeholder="Email" formControlName='userEmail' class="form-contol" required [(ngModel)]="user.username"
+                         name="username">
+                            <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                            class="alert text-danger">UserEmail invalid</div>
+                    </div>
+
+                    <div class="form-group group2 col-md-12">
+                        <label>Password:</label><br>
+                        <input type="password" placeholder="Password" formControlName='password' class="form-contol" required [(ngModel)]="user.password"
+                         name="password">       
+
+                         <div *ngIf="contactsForm.controls.password.touched && contactsForm.controls.password.errors != null"
+                        class="alert text-danger">Password Must Start captail Latter</div>
+                      </div> 
+                      </div>
+                      <a><button type="submit" (click)="saveTutorial()"
+                        class="btn-btn-info">Create</button></a><br>     
+                                 <!-- </div> -->
+            </form>
+        </div>
+</div>
+
+</div>
+        <div class="change-pass">
+            <h5>Show Users</h5>
+            
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">name</th>
+                  <th scope="col">password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let use of userContainer; let i = index">
+                  <th scope="row">{{i}}</th>
+                  <td>{{use.username}}</td>
+                  <td>{{use.password}}</td>
+          
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="Email-and-SMS">
+            <h5>Show requests</h5>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">address</th>
+                    <th scope="col">requests</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let reque of requestContainer; let i = index">
+                    <th scope="row">{{i}}</th>
+                    <td>{{reque.username}}</td>
+                    <td>{{reque.email}}</td>
+                    <td>{{reque.address}}</td>
+                    <td>{{reque.requ}}</td>
+            
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+       
+        <div class="Email-To-School">
+          <h5 class="ml-5">Create Email To School</h5>
+          <div class="line"></div>
+          <div class="container">
+              <div class="row">
+                  <form #studentForm="ngForm" [formGroup]='contactsForm'>
+                      <div class="row">
+      
+                      <div class="form-group group1 col-md-12">
+                              <label>School num:</label><br>
+                              <input type="text" placeholder="School number" formControlName='userEmail' class="form-contol" required [(ngModel)]="user.idd"
+                               name="idd">
+                                  <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                                  class="alert text-danger">UserEmail invalid</div> -->
+                          </div>
+      
+                          <div class="form-group group1 col-md-12">
+                              <label>Email:</label><br>
+                              <input type="text" placeholder="Email" formControlName='userEmail' class="form-contol" required [(ngModel)]="school.email"
+                               name="username">
+                                  <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                                  class="alert text-danger">UserEmail invalid</div>
+                          </div>
+      
+                          <div class="form-group group2 col-md-12">
+                              <label>Password:</label><br>
+                              <input type="password" placeholder="Password" formControlName='password' class="form-contol" required [(ngModel)]="school.password"
+                               name="password">       
+      
+                               <div *ngIf="contactsForm.controls.password.touched && contactsForm.controls.password.errors != null"
+                              class="alert text-danger">Password Must Start captail Latter</div>
+                            </div> 
+                            </div>
+                            <a><button type="submit" (click)="saveEmailtoschool()"
+                              class="btn-btn-info">Create</button></a><br>     
+                                       <!-- </div> -->
+                  </form>
+              </div>
+      </div>
+
+        </div>
+        <app-footer></app-footer>

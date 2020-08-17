@@ -1,0 +1,10 @@
+server:
+  port: 8083
+spring:
+  data:
+    mongodb:
+      database: project-db
+      host: localhost
+      port:  27017
+springSerialPortConnector.portName: /dev/ttyACM0
+springSerialPortConnector.baudRate: 9600

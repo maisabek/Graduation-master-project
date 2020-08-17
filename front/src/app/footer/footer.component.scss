@@ -1,0 +1,135 @@
+/*start of footer*/
+a{text-decoration: none;color: white;}
+.footer{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(src/assets/images/xx.jpg) fixed;
+     background-size: cover;
+     background-repeat: no-repeat;
+     color: white;
+ padding-top: 70px;
+ padding-bottom: 50px;
+ 
+ }
+ .footer .four{
+     color: white;
+        transition: all 0.7s ease-in-out;
+ 
+ }
+ .four-h2{
+     font-size: 29px;
+     margin-bottom:30px;
+     border-bottom: 1px solid white;
+ }
+ .footer  .four-p{
+ font-size: 20px;
+     margin-top: 15px;
+     margin-bottom: 15PX;
+     cursor: pointer;
+ }
+ .footer  .four p:hover{
+     color:rgb(197, 23, 240);
+ }
+ .footer .four icion{
+     margin-left: 10px;
+ }
+ svg:not(:root).svg-inline--fa{
+     margin-right: 30px;
+ }
+ .footer input {
+     margin-bottom: 15px;
+     padding: 15px;
+     border: 2px solid white;
+ background: none;
+     font-size: 25px;
+ }
+ .footer button{  
+     width: 100%;
+     padding: 15px;
+     color: rgb(197, 23, 240);
+     background: white;
+     font-size: 25px;
+     transition: 1sec;
+    transition: all 0.3s ease-in-out;
+ 
+ }
+ .footer button:hover{
+     border: 2px solid white;
+     background: rgb(197, 23, 240);
+     color:white;
+ }
+ .footer .all .right
+ {
+     text-align: center;
+ }
+ .four1{
+     margin-left: 10%;
+ }
+ .four-data,.four-para{
+     float: left;
+     width: 75%;
+     margin-top: 17px;
+     background-color: black;
+ }
+ .four-data{
+     width: 20%;
+     margin-left: 10px;
+     background-color: rgb(41, 41, 41);
+ 
+ }
+ .four-para{
+     min-height: 81px;
+ }
+ .four-data-p2{
+ width: 100%;
+ margin-left: 5%;
+ text-align: center;
+ }
+ .four-data-p1{
+     margin-top: 0px;
+     font-size: 10px;
+     text-align: center;
+ 
+ }
+ .four-data-h2{
+     font-size: 25px;
+     text-align: center;
+ }
+ .four ul li{
+     float: left;
+     list-style-type: none;
+     margin-left: 1%;
+ }
+ .footer-icon{
+     width: 37px;
+     text-align: center;
+     height: 31px;
+     line-height: 29px;
+     border: 1px solid rgb(44, 44, 44);
+     color: white;
+     background-color: rgb(41, 41, 41);
+     transition: all .5s ease-in;
+ }
+ .footer-icon:hover{
+     background-color: rgb(197, 23, 240);
+ }
+ 
+ .scroll{
+     position: relative;
+ }
+ .scrollToTop {
+     width: 45px;
+     height: 45px;
+     position: fixed;
+     bottom: 40px;
+     right: 10px;
+     padding: 7px 12px;
+     border-radius: 3px;
+     z-index: 1000;
+     font-size: 30px !important;
+     text-align: center;
+     color: #fff;
+     background: rgb(197, 23, 240);
+ }
+ .footer-ul{ 
+   margin-left: -32px;
+ }
+ /*end of footer*/

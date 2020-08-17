@@ -1,0 +1,153 @@
+<div class="Schoollinks">
+    <ul>
+        <li data-class="uploadDegree" class="selected"><a>upload Degree</a></li>
+        <li data-class="uploadActivites"><a>upload Activites</a></li>
+        <li data-class="inbox"><a>inbox</a></li>
+        <li data-class="student-info"><a>Student Information</a></li>
+        <li><button type="submit" (click)="logOut()"
+          class="btn-btn-info">logout</button></li>
+        <div class="clear-fix"></div>
+    </ul>
+</div>
+
+<div class="uploadDegree">
+<div class="container">
+<div class="row">
+<h5>Upload Degree</h5>
+<div class="line"></div>
+<form #studentForm="ngForm" [formGroup]='contactsForm'>
+    <div class="row">
+        <div class="form-group group1 col-md-6">
+            <label>Student id: </label><br>
+            <input type="text" formControlName='userEmail' class="form-contol" required [(ngModel)]="newdegree.idd"
+             name="idd">
+                <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                class="alert text-danger">UserEmail invalid</div> -->
+        </div>
+        <div class="form-group group1 col-md-6">
+            <label>Student name: </label><br>
+            <input type="text" formControlName='userEmail' class="form-contol" required [(ngModel)]="newdegree.name"
+             name="idd">
+                <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                class="alert text-danger">UserEmail invalid</div> -->
+        </div>
+    <div class="form-group group1 col-md-12">
+            <label>math Degree: </label><br>
+            <input type="text" formControlName='userEmail' class="form-contol" required [(ngModel)]="newdegree.mathDegree"
+             name="idd">
+                <!-- <div *ngIf="contactsForm.controls.userEmail.touched && contactsForm.controls.userEmail.errors != null"
+                class="alert text-danger">UserEmail invalid</div> -->
+        </div>
+
+        <div class="form-group group1 col-md-12">
+            <label>Aribac Degree:</label><br>
+            <input type="text"  formControlName='userEmail' class="form-contol" required [(ngModel)]="newdegree.aribacDegree"
+             name="username">
+    
+        </div>
+
+        <div class="form-group group2 col-md-12">
+            <label>English Degree:</label><br>
+            <input type="text" formControlName='password' class="form-contol" required [(ngModel)]="newdegree.englishDegree"
+             name="password">        
+          </div>
+          
+        <div class="form-group group2 col-md-12">
+            <label>France Degree:</label><br>
+            <input type="text" formControlName='password' class="form-contol" required [(ngModel)]="newdegree.franceDegree"
+             name="password">        
+          </div> 
+          </div>
+          <a><button type="submit" (click)="saveTutorial()"
+            class="btn-btn-info">Upload Degree</button></a><br>     
+                     <!-- </div> -->
+</form>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<div class="uploadActivites">
+<h5>upload Activites</h5>
+<form #studentForm="ngForm" [formGroup]='contactsForm'>
+  <div class="row">
+      <div class="form-group group1 col-md-12">
+          <label>Student id: </label><br>
+          <input type="text" formControlName='userEmail' class="form-contol" required [(ngModel)]="activites.idd"
+           name="idd">
+         
+      </div>
+      <div class="form-group group1 col-md-12">
+          <label>Student Activity: </label><br>
+          <input type="text" formControlName='userEmail' class="form-contol activity-input" required [(ngModel)]="activites.activity"
+           name="activity">
+             
+      </div>
+      </div>
+      <a><button type="submit" (click)="saveActivity()"
+        class="btn-btn-info">Upload Activity</button></a><br>     
+      </form>
+
+</div>
+<div class="inbox">
+  <div class="inbox1">
+    <div class="front inbox-first">
+      <div class="name">
+        <a><i class="fa fa-star-o a" aria-hidden="true"></i>
+        parent(Me)</a>
+        </div>
+        <div class="content">
+         <p>parent sent you message
+          ...</p>
+        </div>
+        <div class="time">
+         <p>09:00 am</p>
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <div class="line"></div>
+    <div class="hidden-icon">
+      <ul class="icon1">
+        <li><a><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                         </a></li>
+        <li><a><i class="fa fa-trash" aria-hidden="true"></i>
+                         </a></li>
+        <li><a><i class="fa fa-inbox" aria-hidden="true"></i>
+                         </a></li>
+        <li><a><i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                          </a></li>
+       </ul>
+    </div>
+   <div class="back">
+     <app-admin-message></app-admin-message>
+     </div>
+</div></div>
+
+
+
+
+
+<div class="student-info">
+ <h5></h5>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let use of degreeContainer; let i = index">
+            <td>{{use.idd}}</td>
+            <td>{{use.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+<app-footer></app-footer>

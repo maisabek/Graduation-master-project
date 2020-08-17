@@ -1,0 +1,102 @@
+.Schoollinks ul li{
+  list-style-type: none;
+  float: left;
+  margin-left: 6%;
+  padding: 9px;
+  font-size: 19px;
+  color:gray;
+  cursor: pointer;
+}
+.clear-fix{clear: both;}
+
+.Schoollinks,.student-info,.uploadActivites{
+  border: white;
+  width: 96%;
+  margin-top: 26px;
+  margin-left: 1%;
+  padding: 28px 15px 15px 15px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+input{
+    border:1px solid rgb(235, 234, 234);
+    outline: none;
+    width:100%;
+    padding:3px;
+}
+.activity-input{padding: 70px;}
+.student-info,.uploadActivites,.inbox{display: none;}
+.uploadDegree,.inbox{
+    border: white;
+    width: 96%;
+    margin-top: 26px;
+    margin-left: 1%;
+    padding: 28px 15px 15px 15px;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.line{
+    background-color: rgb(235, 233, 233);
+    height: 1px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-btn-info{
+    background: gray;
+    /* linear-gradient(to right, rgba(13, 181, 200, 1) 0%, rgba(8, 155, 171, 1) 100%) !important; */
+    color: #fff;
+    border-color: #007bff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 2%;
+    margin-top:2%;
+  }
+  .front{transition: all 0.5s ease-in;}
+.front:hover,.front:hover .hidden-icon{
+    display: block;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 10px 20px 20px;
+    padding-bottom: 15px;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.fa-long-arrow-left{background-color: white;}
+.back{
+    position: absolute;
+    // height: 19%;
+    width: 56%;
+    margin-left: -2%;
+    margin-top: -120px;
+    background-color: white;
+    display: none;
+    color: gray;
+}
+.hidden-icon{
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -61px;
+  background-color: white;
+  display: none;
+  margin-right: 0%;
+  transition: all .5s ease-in;
+}
+.inbox{margin-left: 1%;display: block;padding-bottom:500px}
+.message{margin-left: 1%;}

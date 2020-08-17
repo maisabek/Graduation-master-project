@@ -1,0 +1,12 @@
+.dashboard{
+    background-color: rgb(126, 10, 161);
+    height: 728px;
+    overflow-y: scroll;
+}
+ul li{margin-top: 8%;margin-left: 2%;font-size: 17px;cursor: pointer;transition: all .8s;}
+.activ{background-color: white;color: rgb(126, 10, 161);padding: 10px;}
+.fa-graduation-cap{font-size:38px;margin-left: 9%;}
+h2{font-size:20px;color: rgb(126, 10, 161) !important;}
+.sensors,.upload,.setup,.implement,.result,.test,.ard-gps{
+    display:none;
+}
